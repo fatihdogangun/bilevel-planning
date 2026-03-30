@@ -496,7 +496,7 @@ def collate_preds(model, loader):
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
     args.add_argument("-n", type=str, required=True, help="Experiment name")
-    args.add_argument("-min_count", type=int, default=50, help="Minimum eff. count required for an operator")
+    args.add_argument("-min_count", type=int, default=100, help="Minimum eff. count required for an operator")
     args = args.parse_args()
 
     model, _ = load_ckpt(args.n, tag="best")
